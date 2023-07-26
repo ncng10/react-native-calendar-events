@@ -1,6 +1,8 @@
 // Type definitions for react-native-calendar v1.7.0
 // Typescript version: 3.0
 
+import { AttendeeStatus } from './types/RNCalendarEvents';
+
 type ISODateString = string;
 export type AuthorizationStatus =
   | "denied"
@@ -46,22 +48,6 @@ interface RecurrenceRule {
   occurrence: number;
   /** The interval between events of this recurrence. */
   interval: number;
-}
-
-export enum AttendeeStatus {
-  IOSAccepted = "Accepted",
-  IOSCompleted = "Completed",
-  IOSDeclined = "Declined",
-  IOSDelegated = "Delegated",
-  IOSInProcess = "InProcess",
-  IOSPending = "Pending",
-  IOSTentative = "Tentative",
-  IOSUnknown = "Unknown",
-  AndroidNone = 0,
-  AndroidAccepted = 1,
-  AndroidDeclined = 2,
-  AndroidInvited = 3,
-  AndroidTentative = 4,
 }
 
 interface Attendee {

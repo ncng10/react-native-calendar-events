@@ -24,6 +24,7 @@ static NSString *const _isDetached = @"isDetached";
 static NSString *const _availability = @"availability";
 static NSString *const _attendees    = @"attendees";
 static NSString *const _timeZone    = @"timeZone";
+NSMutableDictionary *attendeesRoles = [NSMutableDictionary dictionary];
 
 dispatch_queue_t serialQueue;
 
@@ -576,7 +577,6 @@ RCT_EXPORT_MODULE()
     }
 
     @try {
-            NSMutableDictionary *attendeesRoles = [NSMutableDictionary dictionary];
         [attendeesRoles setObject: @"Unknown" forKey: @"0"];
         [attendeesRoles setObject: @"Required" forKey: @"1"];
         [attendeesRoles setObject: @"Optional" forKey: @"2"];
